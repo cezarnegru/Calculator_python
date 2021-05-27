@@ -178,34 +178,23 @@ b0.grid(row=3,column=0,columnspan=3,pady=2,padx=2)
 
 
 def addition():
-	#root.update()
 	addVar = valVar.get()+'+'
 	valVar.set(addVar)
 
 def subtraction():
-	#root.update()
 	subVar = valVar.get()+'-'
 	valVar.set(subVar)
 
 def multiplication():
-	#root.update()
 	multVar = valVar.get()+'*'
 	valVar.set(multVar)
 
 def division():
-	#root.update()
 	divVar = valVar.get()+'/'
 	valVar.set(divVar)
 
 def dot():
 	dotVar = valVar.get()
-	'''
-	if '.' in dotVar:
-		pass
-	else:
-		dotVar += '.'
-		valVar.set(dotVar)
-	'''
 	dotVar += '.'
 	valVar.set(dotVar)
 
@@ -230,7 +219,6 @@ def close_bracket():
 def equals():
 	eqVar = eval(valVar.get())
 	valVar.set(eqVar)
-	#root.update()
 
 def removeChar():
 	removeVar = valVar.get()
@@ -258,12 +246,12 @@ open_bracketBtn.grid(row=2,column=0)
 close_bracketBtn = tk.Button(math_sym_frame, text= ")",font=(12), padx=25, pady=25, command=close_bracket)
 close_bracketBtn.grid(row=2,column=1)
 
-
 dotBtn = tk.Button(math_sym_frame, text= ".",font=('TkDefaultFont',12,'bold'), padx=24, pady=22, command=dot)
 dotBtn.grid(row=3,column=0,sticky='N',padx=2,pady=2)
 
 delBtn = tk.Button(math_sym_frame, text= "<-",font=("TkDefaultFont",12,'bold'),padx=17,pady=22,command=removeChar)
 delBtn.grid(row=3,column=1,sticky='N',padx=2,pady=2)
+
 # Equal Frame
 equalFrame = tk.LabelFrame(root)
 equalFrame.grid(row=2,column=1,sticky='N')
@@ -280,7 +268,5 @@ resetBtn.grid(row=2,column=0,sticky='N',padx=8,pady=2)
 
 exitBtn = tk.Button(exit_frame, text="Exit",font=(12),bd=3,padx=20,pady=25,command=root.destroy)
 exitBtn.grid(row=2,column=1,sticky='N',padx=8,pady=2)
-
-
 
 root.mainloop()
